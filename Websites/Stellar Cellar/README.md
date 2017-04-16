@@ -1,4 +1,3 @@
-## Stellar Cellar
 ![Stellar Cellar Logo](public/images/stellar-cellar.png)
 
 #### Front-End _TODO_
