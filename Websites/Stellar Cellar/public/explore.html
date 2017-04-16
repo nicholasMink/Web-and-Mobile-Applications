@@ -1,0 +1,307 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,600i,700&amp;subset=latin-ext">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Stellar Cellar | Explore</title>
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="my-styles.css">
+    <style>
+        #view-source {
+            position: fixed;
+            display: block;
+            right: 0;
+            bottom: 0;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            z-index: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+        <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+            <div class="mdl-layout__header-row">
+                <span class="android-title mdl-layout-title">
+            <img class="android-logo-image" src="images/stellar-cellar.png">
+          </span>
+                <!-- Add spacer, to align navigation to the right in desktop -->
+                <div class="android-header-spacer mdl-layout-spacer"></div>
+                <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+                        <i class="material-icons">search</i>
+            </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" id="search-field">
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <div class="android-navigation-container">
+                    <nav class="android-navigation mdl-navigation">
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">My Cellar</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Explore</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Trending</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Vineyards</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Locator</a>
+                    </nav>
+                </div>
+                <span class="android-mobile-title mdl-layout-title">
+            <img class="android-logo-image" src="images/stellar-cellar.png">
+          </span>
+                <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+            <i class="material-icons">more_vert</i>
+          </button>
+                <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+                    <li disabled class="mdl-menu__item">About</li>
+                    <li disabled class="mdl-menu__item">Send Feedback</li>
+                    <li disabled class="mdl-menu__item">Help</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="android-drawer mdl-layout__drawer">
+            <span class="mdl-layout-title">
+                <i class="material-icons mdl-list__item-avatar" style="margin-top:25%;">person</i><a class="mdl-card__supporting-text" style="color:#fff;text-decoration:none;font-size:80%;;" href="">Sign In</a><br>
+          <img class="android-logo-image" src="images/stellar-cell-white.png">
+        </span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x" style="color:transparent;"></i><i class="fa fa-home fa-stack-1x" aria-hidden="true"></i></span><span style="padding-left:10%;">My Cellar</span></a>
+                <a class="mdl-navigation__link f-bold" href="explore.html"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-rocket fa-stack-1x fa-inverse" aria-hidden="true"></i></span><span style="padding-left:10%;">Explore</span></a>
+                <a class="mdl-navigation__link" href="blog.html"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x" style="color:transparent;"></i><i class="fa fa-bookmark fa-stack-1x" aria-hidden="true"></i></span><span style="padding-left:12%;">Blog</span></a>
+                <a class="mdl-navigation__link" href="nearby.html"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x" style="color:transparent;"></i><i class="fa fa-location-arrow fa-stack-1x" aria-hidden="true"></i></span><span style="padding-left:11%;">Nearby</span></a>
+                <a class="mdl-navigation__link" href=""><span class="fa-stack"><i class="fa fa-circle fa-stack-2x" style="color:transparent;"></i><i class="fa fa-gear fa-stack-1x" aria-hidden="true"></i></span><span style="padding-left:10%;">Settings</span></a>
+
+                <div class="android-drawer-separator"></div>
+                <a class="mdl-navigation__link" href="">Sign Out</a>
+                <ul style="list-style-type:none" class="mdl-navigation__link">
+                    <li><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-google" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-envelope" aria-hidden="true"></i></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="android-content mdl-layout__content">
+            <a name="top"></a><br><br><br><br>
+            <div class="android-be-together-section">
+                <div class="mdl-typography--text-center">
+                    <div class="logo-font android-slogan ">Categorize Your Favorites</div>
+                    <div class="logo-font android-sub-slogan">Not in the directory? <br>Submit a new wine by clicking the plus button below.
+                        <br><br>
+                    </div>
+                    <!-- Wine list with rating and action -->
+                    <!-- Two Line List with secondary info and action -->
+                    <!--
+                <div class="mdl-mega-footer--bottom-section">
+                    <a class="android-link-menu mdl-typography--font-light" id="version-dropdown">
+                Select
+                <i class="material-icons">arrow_drop_down</i>
+                </a>
+                    <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
+                        <li class="mdl-menu__item">All</li>
+                        <li class="mdl-menu__item">Reds</li>
+                        <li class="mdl-menu__item">Whites</li>
+                        <li class="mdl-menu__item">Hybrids</li>
+                    </ul>
+                </div> -->
+
+                    <ul class="demo-list-two mdl-list">
+                        <span class="mdl-list__item-secondary-info "><a class="android-link-menu mdl-typography--font-light" id="version-dropdown" style="font-size:140%;">
+                        Filter<br>
+                        <i class="material-icons">arrow_drop_down</i>
+                    </a>
+                    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom mdl-js-ripple-effect" for="version-dropdown">
+                        <li class="mdl-menu__item">All</li>
+                        <li class="mdl-menu__item">Reds</li>
+                        <li class="mdl-menu__item">Whites</li>
+                        <li class="mdl-menu__item">Hybrids</li>
+                    </ul>
+                </span><br><br>
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                            <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      <span>Wine 6</span>
+                            <span class="mdl-list__item-sub-title">62 Ratings</span>
+                            </span>
+                            <span class="mdl-list__item-secondary-content">
+                            <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+                        </span>
+                        </li>
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                            <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      <span>Wine 5</span>
+                            <span class="mdl-list__item-sub-title">44 Ratings</span>
+                            </span>
+                            <span class="mdl-list__item-secondary-content">
+      <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+    </span>
+                        </li>
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                            <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      <span>Wine 4</span>
+                            <span class="mdl-list__item-sub-title">34 Ratings</span>
+                            </span>
+                            <span class="mdl-list__item-secondary-content">
+      <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+    </span>
+                        </li>
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                            <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      <span>Wine 3</span>
+                            <span class="mdl-list__item-sub-title">17 Ratings</span>
+                            </span>
+                            <span class="mdl-list__item-secondary-content">
+      <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+    </span>
+                        </li>
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                            <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      <span>Wine 2</span>
+                            <span class="mdl-list__item-sub-title">8 Ratings</span>
+                            </span>
+                            <span class="mdl-list__item-secondary-content">
+      <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+    </span>
+                        </li>
+                        <li class="mdl-list__item mdl-list__item--two-line">
+                            <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      <span>Wine 1</span>
+                            <span class="mdl-list__item-sub-title">5 Ratings</span>
+                            </span>
+                            <span class="mdl-list__item-secondary-content">
+      <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+    </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- List with avatar and controls -->
+
+                <!-- <a href="#screens">
+                    <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+              <i class="material-icons">expand_more</i>
+            </button>
+                </a> -->
+                <!-- <div class="android-customized-section">
+                <div class="android-customized-section-text">
+                    <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Wine Locator</div>
+                    <p class="mdl-typography--font-light">
+                        <i>Coming soon</i>
+                        <br>
+                        <a href="store-locator.html" class="android-link mdl-typography--font-light"></a>
+                    </p>
+                </div>
+                <div class="android-customized-section-image"></div>
+            </div> -->
+
+                <footer class="android-footer mdl-mega-footer">
+                    <div class="mdl-mega-footer--top-section">
+                        <div class="mdl-mega-footer--left-section">
+                        </div>
+                        <div class="mdl-mega-footer--right-section">
+                            <a class="mdl-typography--font-light" href="#top" style="display:none;">
+                Back to Top
+                <i class="material-icons">expand_less</i>
+              </a>
+                        </div>
+                    </div>
+
+                    <div class="mdl-mega-footer--middle-section">
+                        <p class="mdl-typography--font-light">Stellar Cellar © 2017 | Austin TX</p>
+                        <p class="mdl-typography--font-light">Designed by nicholasMink - Enjoy Responsively</p>
+                    </div>
+
+                    <div class="mdl-mega-footer--bottom-section">
+                        <a class="android-link-menu mdl-typography--font-light" id="version-dropdown">
+              Contact
+              <i class="material-icons">arrow_drop_up</i>
+            </a>
+                        <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
+                            <li class="mdl-menu__item">Email</li>
+                            <li class="mdl-menu__item">Phone</li>
+                            <li class="mdl-menu__item">Snail Mail</li>
+                        </ul>
+                        <a class="android-link mdl-typography--font-light" href="">Blog</a>
+                        <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
+                    </div>
+
+                </footer>
+            </div>
+        </div>
+
+        <!-- Simple Tooltip -->
+
+        <button id='view-source' class="mdl-button mdl-js-button mdl-button--fab  mdl-color--grey mdl-js-ripple-effect">
+  <i class="material-icons mdl-color-text--accent-contrast">add</i>
+</button>
+        <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyBOGbuwidrAIP2sUl2Fgmn44wBe-O7vDXU",
+                authDomain: "sweet-d.firebaseapp.com",
+                databaseURL: "https://sweet-d.firebaseio.com",
+                projectId: "sweet-d",
+                storageBucket: "sweet-d.appspot.com",
+                messagingSenderId: "852343630594"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <!-- <script>
+  var provider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
+
+  </script> -->
+</body>
+
+</html>
